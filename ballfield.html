@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket animation</title>
+    <style>
+        #cricket-stadium{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cricket-field{
+            width: 700px;
+            height: 500px;
+            border-radius: 80%;
+            border: 4px solid gray;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .field{
+            width: 50%;
+            height: 20%;
+            background-color: #9ebd9d;
+            position: relative;
+        }
+        .field:hover img{
+            transform: rotate(-20deg);
+            transform-origin: top right;
+        }
+        img{
+            width: 20%;
+            height: auto;
+            transition: transform .1s ease-in;
+        }
+        .ball{
+            width: 10px;
+            height: 10px;
+            border: 1px dotted #ffffff;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            left: 40px;
+            top: 65px;
+            transition: transform .5s ease-out .1s;
+        }
+        .field:hover .ball{
+            transform: translate(500px, -80px);
+        }
+    </style>
+</head>
+<body>
+    <section id="cricket-stadium">
+        <div class="cricket-field">
+            <div class="field">
+                <img src="./images/bat.png" alt="">
+                <div class="ball"></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
